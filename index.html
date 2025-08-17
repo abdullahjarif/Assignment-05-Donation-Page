@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Bangladesh</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .Lexend_font {
+            font-family: "Lexend", sans-serif;
+        }
+
+        /* Added some smooth hover effects and animations */
+        .btn:hover {
+            background-color: #B4F461;
+            color: black;
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.05);
+        }
+
+        .hero-content {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hero-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .divider {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #4A4A4A;
+            margin-top: 3rem;
+        }
+
+        .input:focus {
+            border-color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0 0.5);
+        }
+
+        .notification-card {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="Lexend_font bg-gray-50 m-5">
+
+    <header>
+        <div class="navbar bg-gradient-to-r from-pink-100 via-pink-50 to-pink-100 shadow-lg">
+
+            <div class="navbar-start">
+                <!-- Blog Button -->
+                <div class="navbar-end">
+                    <button id="blog_btn"
+                        class="btn bg-transparent text-black font-bold hover:bg-[#B4F461] hover:text-black transition-all duration-700">Blog</button>
+                </div>
+            </div>
+
+            <div class="navbar-center flex justify-center sm:justify-start md:justify-center">
+                <div
+                    class="flex items-center justify-center gap-3 sm:gap-4 md:gap-5 text-xl sm:text-2xl md:text-3xl font-semibold">
+                    <img src="./images/donate.png" alt="Donate Bangladesh"
+                        class="h-9 w-9 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 rounded-full object-cover">
+                    <h1 class="whitespace-nowrap text-black">Donate Bangladesh</h1>
+                </div>
+            </div>
+
+            <div class="navbar-end flex justify-center items-center gap-3 text-sm sm:text-base md:text-lg lg:text-xl">
+                <img src="./images/dollar.png" alt="Dollar Icon"
+                    class="h-6 w-6 sm:h-8 sm:w-8 md:h-9 md:w-9 object-contain">
+                <div class="font-bold tabular-nums flex gap-2 text-black">
+                    <div id="total_Donateamount">50000</div>
+                    <div>BDT</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="divider">Donation Campaigns</div>
+
+    <!-- Donation and History Buttons -->
+    <div class="flex justify-center gap-6 mt-8">
+        <button id="btn_donateForm"
+            class="btn bg-transparent btn-sm sm:btn-md md:btn-lg lg:btn-xl hover:bg-[#B4F461] transition-all duration-700">Donate
+            Now</button>
+        <button id="btn_historyForm"
+            class="btn bg-transparent btn-sm sm:btn-md md:btn-lg lg:btn-xl hover:bg-[#B4F461] transition-all duration-700">History</button>
+    </div>
+
+    <main class="mt-10">
+
+        <!-- Donation Campaigns -->
+        <div id="donation_container" class="flex flex-wrap flex-col justify-center items-center">
+
+            <!-- Campaign 1 -->
+            <div class="py-8">
+                <div class="hero-content flex-col lg:flex-row gap-10 items-center">
+                    <img src="./images/Rectangle_1.png" class="w-full max-w rounded-lg shadow-2xl object-contain" />
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <img src="./images/dollar.png" alt="Dollar Icon" class="object-contain">
+                            <div class="flex gap-2 text-lg font-bold text-gray-600">
+                                <div id="balance_1">0</div>
+                                <div>BDT</div>
+                            </div>
+                        </div>
+                        <h1 class="text-2xl font-bold mt-5" id="flood_Noakhali">Donate for Flood at Noakhali, Bangladesh
+                        </h1>
+                        <p class="py-6">The recent floods in Noakhali have caused significant damage to homes
+                            infrastructure. Your donation will help provide essential supplies and aid to those affected
+                            by this disaster. Every contribution, big or small, makes a difference. Please join us in
+                            supporting the relief efforts and making a positive impact.</p>
+                        <input id="donation_amount_1" type="text" placeholder="Write Donation Amount"
+                            class="input bg-transparent input-bordered w-full max-w-sm mb-5" />
+                        <button id="donate_btn_1"
+                            class="btn bg-transparent w-full max-w-sm hover:bg-[#B4F461] transition-all duration-700">Donate
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign 2 -->
+            <div>
+                <div class="hero-content flex-col lg:flex-row-reverse gap-10">
+                    <img src="./images/Rectangle_2.png" class="w-full max-w rounded-lg shadow-2xl object-contain" />
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <img src="./images/dollar.png" alt="Dollar Icon" class="object-contain">
+                            <h1 class="text-lg font-bold text-gray-600">
+                                <span id="balance_2">600</span> BDT
+                            </h1>
+                        </div>
+                        <h1 class="text-2xl font-bold mt-5" id="flood_feni">Donate for Flood Relief in Feni, Bangladesh
+                        </h1>
+                        <p class="py-5">The recent floods in Feni have devastated local communities, leading to severe
+                            disruption. Your generous donation will help provide food, clean water, and medical
+                            supplies. Every contribution counts towards rebuilding lives. Consider donating today to
+                            assist those in urgent need.</p>
+                        <input id="donation_amount_2" type="text" placeholder="Write Donation Amount"
+                            class="input bg-transparent input-bordered w-full max-w-sm mb-5" />
+                        <button id="donate_btn_2"
+                            class="btn bg-transparent w-full max-w-sm hover:bg-[#B4F461] transition-all duration-700">Donate
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign 3 -->
+            <div class="py-8">
+                <div class="hero-content flex-col lg:flex-row gap-10 items-center">
+                    <img src="./images/Rectangle_3.png" class="w-full max-w rounded-lg shadow-2xl object-contain" />
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <img src="./images/dollar.png" alt="Dollar Icon" class="object-contain">
+                            <h1 class="text-lg font-bold text-gray-600">
+                                <span id="balance_3">2400</span> BDT
+                            </h1>
+                        </div>
+                        <h1 class="text-2xl font-bold mt-5" id="quota_movement">Aid for Injured in the Quota Movement
+                        </h1>
+                        <p class="py-6">The Quota movement has resulted in numerous injuries. Your support is crucial
+                            for providing medical assistance, rehabilitation, and necessary supplies. Contribute to
+                            ensure that these individuals receive care and support. Every donation plays a vital role in
+                            aiding their recovery.</p>
+                        <input id="donation_amount_3" type="text" placeholder="Write Donation Amount"
+                            class="input bg-transparent input-bordered w-full max-w-sm mb-5" />
+                        <button id="donate_btn_3"
+                            class="btn bg-transparent w-full max-w-sm hover:bg-[#B4F461] transition-all duration-700">Donate
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- History Section -->
+        <div id="history_container" class="hidden px-4 py-8 max-w-4xl mx-auto">
+            <div class="divider text-3xl font-bold text-center text-gray-700 mb-8">
+                <span class="bg-white px-6 py-2 rounded-full shadow-sm">Donation History</span>
+            </div>
+
+            <!-- Timeline Wrapper -->
+            <div class="relative">
+                <!-- Empty State -->
+                <div id="history_empty" class="text-center">
+            
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Donation Confirmation Notification -->
+        <div id="notification_container" class="hidden">
+            <div
+                class="card bg-gray-100 shadow-xl w-full max-w-md rounded-xl overflow-hidden border border-base-200 notification-card">
+                <div class="card-body text-center p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Congrats!</h2>
+                    <div class="flex justify-center mb-4">
+                        <span class="text-6xl">💰</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">You Have Donated for Humankind</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Successfully</h3>
+                    <button id="close_btn"
+                        class="btn btn-ghost btn-sm text-gray-700 hover:text-gray-900 border border-gray-300 hover:border-gray-400 transition-colors">Close
+                        Confirmation</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./js/library.js"></script>
+    <script src="./js/donate_System.js"></script>
+    <script src="./js/donate_System_2.js"></script>
+    <script src="./js/donate_System_3.js"></script>
+    <script src="./js/notification.js"></script>
+    <script src="./js/toggle_features.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+        }
+
+        .Lexend_font {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: #1dbf73;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .divider {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4a5568;
+            margin-top: 3rem;
+        }
+
+        .badge {
+            background-color: #ffdd57;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .project-date {
+            color: #718096;
+            font-size: 0.875rem;
+        }
+
+        .total-donate {
+            font-size: 1.5rem;
+            color: #4caf50;
+            font-weight: 700;
+        }
+
+        .card-image {
+            height: 160px;
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .navbar-center {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .navbar-center:hover {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="Lexend_font">
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50">
+        <div class="navbar bg-gradient-to-r from-pink-100 via-pink-50 to-pink-100 text-black shadow-2xl">
+            <div class="flex-1">
+                <!-- Logo & Brand -->
+                <div class="flex items-center gap-3 pl-4 sm:pl-6">
+                    <div class="relative">
+                        <img src="./images/donate.png" alt="Donate Bangladesh"
+                            class="h-10 w-10 rounded-full object-contain ring-2 ring-white/60" />
+                        <span class="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-30"></span>
+                    </div>
+                    <h1 class="text-lg sm:text-xl md:text-2xl font-bold tracking-wide whitespace-nowrap">
+                        Donate Bangladesh
+                    </h1>
+                </div>
+            </div>
+
+           
+
+            <!-- Right Side: Donation Counter & Button -->
+            <div class="flex-none flex items-center gap-4 pr-4 sm:pr-6">
+
+                <!-- Donation Counter -->
+                <div
+                    class="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-bold border border-white/30 transition-all duration-300 hover:bg-white/30">
+                    <img src="./images/dollar.png" alt="Dollar Icon" class="h-6 w-6 drop-shadow-sm" />
+                    <span id="total_Donateamount" class="donate-counter tabular-nums">50000</span>
+                    <span>BDT</span>
+                </div>
+
+                <!-- Donate Button with Hover Glow -->
+                <button id="donateNow_btn" class="btn bg-transparent text-black font-bold hover:bg-[#B4F461] hover:text-black transition-all duration-700">Donate Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Divider -->
+    <div class="divider">Current Projects</div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-5 py-10">
+
+        <!-- Project Card 1 -->
+        <div class="card bg-white shadow-xl rounded-xl border border-gray-200 p-6 mb-10 hover:shadow-xl">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <div class="flex-shrink-0">
+                    <img src="./images/banner1.png" alt="Project Image" class="card-image object-contain" />
+                </div>
+
+                <div class="flex-1">
+                    <p class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">NOBODY: "Building Climate Resilience and
+                        Sustainable Livelihoods for Coastal Women and Youth"</p>
+                    <div class="flex gap-3 mb-4">
+                        <span class="badge px-5 py-5 text-black">Current Projects</span>
+                        <span class="badge px-5 py-5 text-black">Climate</span>
+                        <span class="badge px-5 py-5 text-black">Women</span>
+                    </div>
+                    <p class="project-date">Jul 28, 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="card bg-white shadow-xl rounded-xl border border-gray-200 p-6 mb-10 hover:shadow-xl">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <div class="flex-shrink-0">
+                    <img src="./images/banner2.png" alt="Project Image" class="card-image object-contain" />
+                </div>
+
+                <div class="flex-1">
+                    <p class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Rising Hope: Flood Recovery and
+                        Resilience Project</p>
+                    <div class="flex gap-3 mb-4">
+                        <span class="badge px-5 py-5 text-black">Current Projects</span>
+                        <span class="badge px-5 py-5 text-black">Climate</span>
+                    </div>
+                    <p class="project-date">Feb 02, 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="card bg-white shadow-xl rounded-xl border border-gray-200 p-6 mb-10 hover:shadow-xl">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <div class="flex-shrink-0">
+                    <img src="./images/banner3.png" alt="Project Image" class="card-image object-contain" />
+                </div>
+
+                <div class="flex-1">
+                    <p class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">English Access Scholarship Program</p>
+                    <div class="flex gap-3 mb-4">
+                        <span class="badge px-5 py-5 text-black">Current Projects</span>
+                        <span class="badge px-5 py-5 text-black">Education</span>
+                    </div>
+                    <p class="project-date">Feb 02, 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="card bg-white shadow-xl rounded-xl border border-gray-200 p-6 mb-10 hover:shadow-xl">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <div class="flex-shrink-0">
+                    <img src="./images/banner4.png" alt="Project Image" class="card-image object-contain" />
+                </div>
+
+                <div class="flex-1">
+                    <p class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">My Voice My Choice</p>
+                    <div class="flex gap-3 mb-4">
+                        <span class="badge px-5 py-5 text-black">Current Projects</span>
+                        <span class="badge px-5 py-5 text-black">Youth</span>
+                        <span class="badge px-5 py-5 text-black">Governance</span>
+                    </div>
+                    <p class="project-date">Aug 21, 2024</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center mb-4">
+                <img src="./images/donate.png" alt="Logo" class="h-12 w-12 rounded-full object-contain" />
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Donate Bangladesh</h3>
+            <p class="text-gray-400 mb-6">Building a better future for all.</p>
+            <div class="flex justify-center space-x-6 text-sm text-gray-300">
+                <a href="#" class="hover:text-white transition">Privacy</a>
+                <a href="#" class="hover:text-white transition">Terms</a>
+                <a href="#" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/blog.js"></script>
+</body>
+
+</html>
